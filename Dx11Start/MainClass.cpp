@@ -114,9 +114,9 @@ HRESULT MainClass::CreateDesktopWindow()
 
 int MainClass::Run(
 	std::shared_ptr<DeviceResources> deviceResources,
-	std::shared_ptr<Renderer> renderer
-)
-{
+	std::shared_ptr<Renderer> renderer) {
+	//MainClass* pClass = (MainClass*)GetWindowLongPtr(m_hWnd, GWL_USERDATA);
+
 	if (!IsWindowVisible(m_hWnd))
 		ShowWindow(m_hWnd, SW_SHOW);
 
@@ -150,7 +150,8 @@ int MainClass::Run(
 			deviceResources->Present();
 		}
 	}
-		GoWindowed();
+
+	deviceResources->GoWindowed();
 
 	return (int)msg.wParam;
 }

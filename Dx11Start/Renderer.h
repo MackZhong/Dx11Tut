@@ -5,7 +5,8 @@
 ////
 //// Copyright (c) Microsoft Corporation. All rights reserved
 #pragma once
-
+#include <comdef.h>
+#include <comdefsp.h>
 
 //-----------------------------------------------------------------------------
 // Includes
@@ -83,4 +84,5 @@ private:
 	Microsoft::WRL::ComPtr<ID3D11InputLayout>       m_pInputLayoutExtended;
 	Microsoft::WRL::ComPtr<ID3D11PixelShader>       m_pPixelShader;
 	Microsoft::WRL::ComPtr<ID3D11Buffer>            m_pConstantBuffer;
+	//com_ptr_t cptr;
 };

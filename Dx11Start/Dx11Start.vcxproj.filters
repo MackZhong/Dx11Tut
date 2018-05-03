@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Sharders">
+      <UniqueIdentifier>{7b4782a7-304c-4c3b-86cb-6d1830eef0b7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -49,8 +52,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="CubeVertexShader.hlsl" />
-    <FxCompile Include="CubePixelShader.hlsl" />
+    <FxCompile Include="CubePixelShader.hlsl">
+      <Filter>Sharders</Filter>
+    </FxCompile>
+    <FxCompile Include="CubeVertexShader.hlsl">
+      <Filter>Sharders</Filter>
+    </FxCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico">
